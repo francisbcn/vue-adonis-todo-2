@@ -8,7 +8,7 @@ class InvalidAccessException extends LogicalException {
    */
    handle (error, {response}) {
     return response.status(403).json({
-      error: 'invalida acces to resource',
+      error: 'invalid acces to resource',
     });
    }
 }

@@ -22,7 +22,7 @@ class UserController {
     }
   }
 
-
+module.exports = UserController
 
 /* AQUI COMPRUEBO QUE EL USER NO ESTE CREADO YA :D
 
@@ -44,10 +44,6 @@ class UserController {
       return user;
     }
   } */
-
-
-module.exports = UserController
-
 
 
 /* class UserController {
