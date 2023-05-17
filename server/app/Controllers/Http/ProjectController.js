@@ -27,15 +27,13 @@ class ProjectController {
         const { id } = params;
         const project = await Project.find(id);
         AuthorizationService.verifyPermission(project, user);
-        if (project.user_id !== user.id) {
-            return response.status(403);
-        };
         await project.delete();
         return project;
     }
 
     async update({ auth, request, params }) {
         const user = await auth.getUser();
+        console.log('user', user);
         const { id } = params;
         const project = await Project.find(id);
         AuthorizationService.verifyPermission(project, user);
